@@ -3,7 +3,7 @@ function placeholderInit(){
 	$('[placeholder]').placeholder();
 }
 /*placeholder end*/
-/* showInput */
+/*showInput */
 function showInput(){
 	var searchForm = $('.search-form');
 	if(!searchForm.length){ return; }
@@ -37,11 +37,42 @@ function showInput(){
 		}
 	});
 }
-/* showInput end  */
+/*showInput end*/
+
+/*equalHeight*/
+function equalHeightInit() {
+	/* resources list */
+	var parentWrapper = $('.products-list');
+	parentWrapper.find('.product-title').equalHeight({
+		//amount: 5,
+		useParent: true,
+		parent: parentWrapper,
+		resize: true
+	});
+}
+/*equalHeight end*/
+
+/* footer at bottom */
+function footerBottom(){
+	var footer = $('.footer');
+	var footerOuterHeight = footer.outerHeight();
+	var footerHeight = footer.height();
+	footer.css({
+		'margin-top': -footerOuterHeight,
+		'height': footerHeight,
+		'min-height': footerHeight
+	});
+	$('.spacer').css({
+		'height': footerOuterHeight
+	});
+}
+/* footer at bottom end */
 
 /** ready/load/resize document **/
 
 $(document).ready(function(){
 	placeholderInit();
 	showInput();
+	equalHeightInit();
+	footerBottom();
 });

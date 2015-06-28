@@ -3,6 +3,11 @@
 	position: relative;
 	text-align: center;
 	text-decoration:none;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+	backface-visibility: hidden;
 }
 [class|="btn"] input[type="submit"],
 [class*=" btn-"] input[type="submit"],
@@ -19,3 +24,22 @@
 	z-index: 99;
 	border:0;
 }
+.btn-buy{
+	font-size: 13px;
+	line-height: 15px;
+	color: #656565;
+	border: 1px solid #707070;
+	border-radius: 3px;
+	background: #f0f0f0;
+	padding: 5px 15px;
+	position: relative;
+}
+/*.btn-buy:hover{
+	border: 1px solid #f0f0f0;
+	background: #707070;
+	color: #f0f0f0;
+}
+.btn-buy:active{
+	right: -1px;
+	bottom: -1px;
+}*/
