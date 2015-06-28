@@ -42,11 +42,18 @@ function showInput(){
 /*equalHeight*/
 function equalHeightInit() {
 	/* resources list */
-	var parentWrapper = $('.products-list');
+	var parentWrapper = $('.categories');
 	parentWrapper.find('.product-title').equalHeight({
-		//amount: 5,
+		amount: 5,
 		useParent: true,
 		parent: parentWrapper,
+		resize: true
+	});
+	var hitsList = $('.hits');
+	hitsList.find('.product-title').equalHeight({
+		amount: 5,
+		useParent: true,
+		parent: hitsList,
 		resize: true
 	});
 }
@@ -74,5 +81,10 @@ $(document).ready(function(){
 	placeholderInit();
 	showInput();
 	equalHeightInit();
+});
+$(window).load(function(){
+	footerBottom();
+})
+;$(window).resize(function(){
 	footerBottom();
 });
