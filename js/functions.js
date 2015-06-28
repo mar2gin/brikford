@@ -41,19 +41,38 @@ function showInput(){
 
 /*equalHeight*/
 function equalHeightInit() {
-	/* resources list */
+	/*categories list*/
 	var parentWrapper = $('.categories');
+	var amountSizeCategories = parentWrapper.children('li').length;
 	parentWrapper.find('.product-title').equalHeight({
-		amount: 5,
-		useParent: true,
-		parent: parentWrapper,
+		amount: amountSizeCategories,
+		//useParent: true,
+		//parent: parentWrapper,
 		resize: true
 	});
+	/*hits list*/
 	var hitsList = $('.hits');
+	var amountSizeHits = hitsList.children('li').length;
 	hitsList.find('.product-title').equalHeight({
-		amount: 5,
-		useParent: true,
-		parent: hitsList,
+		amount: amountSizeHits,
+		//useParent: true,
+		//parent: hitsList,
+		resize: true
+	});
+	/*goods list*/
+	var goodsList = $('.goods');
+	var amountSizeGoods = goodsList.children('li').length;
+	goodsList.find('.product-title').equalHeight({
+		amount: amountSizeGoods,
+		//useParent: true,
+		//parent: goodsList,
+		resize: true
+	});
+	/*goods list*/
+	goodsList.find('.product-brands-list').equalHeight({
+		amount: amountSizeGoods,
+		//useParent: true,
+		//parent: goodsList,
 		resize: true
 	});
 }
@@ -80,10 +99,10 @@ function footerBottom(){
 $(document).ready(function(){
 	placeholderInit();
 	showInput();
-	equalHeightInit();
 });
 $(window).load(function(){
 	footerBottom();
+	equalHeightInit();
 })
 ;$(window).resize(function(){
 	footerBottom();

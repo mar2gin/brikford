@@ -34,12 +34,11 @@
 	padding: 3px 14px 4px;
 	position: relative;
 }
-/*.btn-buy:hover{
-	border: 1px solid #f0f0f0;
+.btn-buy:hover{
 	background: #707070;
 	color: #f0f0f0;
 }
 .btn-buy:active{
 	right: -1px;
 	bottom: -1px;
-}*/
+}
