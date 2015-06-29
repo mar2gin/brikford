@@ -522,6 +522,28 @@ a{
 	line-height: 28px;
 	padding: 0 0 14px;
 }
+/* breadcrumbs */
+.breadcrumbs-list{
+	overflow: hidden;
+	padding: 6px 0 0;
+}
+.breadcrumbs-list li{
+	padding: 0 20px 4px 0;
+	float: left;
+	position: relative;
+}
+.breadcrumbs-list li:after{
+	content: '';
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	background: url(../img/sprite-icons.png) no-repeat 0 -42px;
+	height: 7px;
+	width: 4px;
+}
+.breadcrumbs-list a{ text-decoration: underline; }
+.breadcrumbs-list a:hover{ text-decoration: none; }
+/* breadcrumbs end */
 /*groups*/
 .groups{
 	padding: 17px 0 14px 25px;
@@ -757,6 +779,45 @@ a:hover .product-title > strong{
 	cursor: default;
 }
 /* paging end */
+/*news*/
+.news{
+	overflow: hidden;
+	padding: 0 0 10px;
+}
+.news-list{
+	margin-left: -54px;
+	font-size: 0;
+	letter-spacing: -4px;
+}
+.news-list li{
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: normal;
+	color: #4b4f55;
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding: 0 0 31px 54px;
+}
+.news-list h3{
+	font-size: 16px;
+	line-height: 19px;
+	padding: 0 0 7px;
+	overflow: hidden;
+}
+.news-list h3 a{
+	padding-top: 5px;
+}
+.news-list .news-description{
+	max-height: 64px;
+	overflow: hidden;
+	margin: 0 0 14px;
+}
+.news-list time{
+	display: block;
+	font-style: normal;
+}
+/*news end*/
 /*main end*/
 
 /*sidebar*/
