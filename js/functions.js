@@ -68,11 +68,17 @@ function equalHeightInit() {
 		//parent: goodsList,
 		resize: true
 	});
-	/*goods list*/
 	goodsList.find('.product-brands-list').equalHeight({
 		amount: amountSizeGoods,
 		//useParent: true,
 		//parent: goodsList,
+		resize: true
+	});
+	/*actions list*/
+	var actionsList = $('.actions-list');
+	var amountSizeActions = actionsList.children('li').length;
+	actionsList.find('.product-title').equalHeight({
+		amount: amountSizeActions,
 		resize: true
 	});
 }
