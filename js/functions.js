@@ -100,11 +100,63 @@ function footerBottom(){
 }
 /* footer at bottom end */
 
+/*slick init*/
+function slickInit(){
+	$('.slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 979,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: false
+				}
+			},
+			{
+				breakpoint: 639,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: false
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		],
+		speed: 500
+	});
+}
+/*slick init end*/
+
+/*fancybox*/
+function fancyboxInit(){
+	if ($('.photo-gallery').length) {
+		$('.photo-gallery a').each(function () {
+			$(this)
+				.attr('data-fancybox-group', 'photo-gallery')
+
+		});
+		$('.photo-gallery a').fancybox({
+			openEffect: 'none',
+			closeEffect: 'none'
+		});
+
+	}
+}
+
+/*fancybox end*/
+
 /** ready/load/resize document **/
 
 $(document).ready(function(){
 	placeholderInit();
 	showInput();
+	slickInit();
+	fancyboxInit();
 });
 $(window).load(function(){
 	footerBottom();

@@ -1,1 +1,12 @@
-﻿
+﻿[class*="btn-default"]{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfc', endColorstr='#d0d2d7',GradientType=0 );
+}
+[class*="btn-default"]:before{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfc', endColorstr='#eaecef',GradientType=0 );
+}
+.btn-default-call{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80de11', endColorstr='#3bac0d',GradientType=0 );
+}
+.btn-default-call:before{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80de11', endColorstr='#66d110',GradientType=0 );
+}
