@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
 	font-size: 24px;
-	line-height: 28px;
+	line-height: 29px;
 	padding: 0 0 12px;
 }
 h2{
@@ -528,7 +528,7 @@ a{
 	padding: 6px 0 0;
 }
 .breadcrumbs-list li{
-	padding: 0 20px 4px 0;
+	padding: 0 20px 3px 0;
 	float: left;
 	position: relative;
 }
@@ -840,6 +840,38 @@ a:hover .product-title > strong{
 	font-style: normal;
 }
 /*news end*/
+
+/*product*/
+.product-figure{
+	float: left;
+	margin: 0 46px 0 0;
+}
+.product-content{
+	overflow: hidden;
+}
+.product .product-price{
+	padding: 0 0 11px;
+}
+.product .product-price .price-value:before{
+	content: '/';
+	font-size: 20px;
+	line-height: 22px;
+	color: #000;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	padding: 0 5px 0 2px;
+}
+.product .product-price .price-value:first-child:before{
+	content: none;
+	display: none;
+}
+.product-buttons{
+	margin:0;
+	list-style:none;
+	padding:0;
+}
+/*product end*/
 /*main end*/
 
 /*sidebar*/
