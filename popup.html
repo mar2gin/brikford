@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Brikford</title>
+	<title>Brikford - Main</title>
 	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--Mobile optimized-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,13 +89,81 @@
 		<div class="max-wrap">
 			<!--main holder-->
 			<div class="main-holder">
-				<ol>
-					<li><a href="main.html">Main page</a></li>
-					<li><a href="catalog.html">Catalog page</a></li>
-					<li><a href="news.html">News page</a></li>
-					<li><a href="sales.html">Sales page</a></li>
-					<li><a href="popup.html">Popup example</a></li>
-				</ol>
+				<!--main content wrapper-->
+				<div class="content-wrap">
+					<!--main content-->
+					<div class="content">
+						<h1>Пример попапа</h1>
+						<ul class="example-popup-list">
+							<li><a href="#login-popup" class="popup-open">Вход</a></li>
+						</ul>
+					</div>
+					<!--main content end-->
+				</div>
+				<!--main content wrapper end-->
+
+				<!--sidebar-->
+				<aside class="sidebar">
+					<nav class="menu">
+						<ul class="menu-list">
+							<li><a href="#">Акции</a></li>
+							<li class="active"><a href="#">Каталог</a>
+								<ul>
+									<li class="active"><a href="#">Кирпич</a>
+										<ul>
+											<li><a href="#">Клинкерный кирпич</a></li>
+											<li><a href="#">Кирпич ручной формовки</a></li>
+											<li><a href="#">Кирпич ригельформат</a></li>
+											<li><a href="#">Кирпич лицевой Россия</a></li>
+											<li><a href="#">Глазурованный кирпич</a></li>
+											<li><a href="#">Кирпич для бесшовной кладки</a></li>
+											<li><a href="#">Кирпич BENELUX мануфактуры</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Теплая керамика</a></li>
+									<li><a href="#">Плитка для интерьеров и фасадов</a></li>
+									<li><a href="#">Керамическая черепица</a></li>
+									<li><a href="#">Облицовочный камень</a></li>
+									<li><a href="#">Мощение</a></li>
+									<li><a href="#">Медь, Титан - Цинк</a></li>
+									<li><a href="#">Сланец</a></li>
+									<li><a href="#">Кровельный алюминий</a></li>
+									<li><a href="#">Водосточные системы</a></li>
+									<li><a href="#">Пленки</a></li>
+									<li><a href="#">Дымоходы</a></li>
+									<li><a href="#">Мансардные окна</a></li>
+									<li><a href="#">Молниезащита</a></li>
+									<li><a href="#">Напольная керамика</a></li>
+									<li><a href="#">Сухие строительные смеси</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Пресс-релизы</a></li>
+							<li><a href="#">Федеральная сеть</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Гду купить</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+						</ul>
+					</nav>
+					<div class="widget">
+						<div class="widget-title">
+							<h3>Новости</h3>
+							<i class="icon-rss"></i> <a href="#">Все</a>
+						</div>
+						<ul class="news-links-list">
+							<li><a href="#">Акция «DOLCE VITA»</a></li>
+							<li><a href="#">Помощь детской больнице</a></li>
+							<li><a href="#">Новинки White Hills</a></li>
+						</ul>
+					</div>
+					<div class="widget">
+						<div class="promo-banner">
+							<a href="#"><img src="pic/banner.jpg" alt="image description" /></a>
+						</div>
+					</div>
+				</aside>
+				<!--sidebar-->
 			</div>
 			<!--main holder end-->
 		</div>
@@ -169,7 +237,39 @@
 	<!--footer bottom end-->
 </footer>
 <!--footer end-->
-
+<!--popups-->
+<div class="popups">
+	<div class="popup login-popup" id="login-popup">
+		<strong class="popup-title">Вход</strong>
+		<!-- login form -->
+		<div class="login-form">
+			<form action="#" method="get">
+				<fieldset>
+					<div class="form-line">
+						<input type="text" placeholder="Логин" />
+					</div>
+					<div class="form-line">
+						<input type="password" placeholder="Пароль" />
+					</div>
+					<div class="form-options">
+						<div class="btn-submit">
+							<span>Войти</span>
+							<input type="submit" value="">
+						</div>
+						<div class="remember-me">
+							<label class="check">
+								<input class="def-ch" type="checkbox" checked>
+								<span class="label-text">Запоминть меня</span>
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!-- login form end -->
+	</div>
+</div>
+<!--popups-->
 <!--JQuery library-->
 <script src="js/jquery-1.11.3.min.js"></script>
 <!--JQuery UI-->

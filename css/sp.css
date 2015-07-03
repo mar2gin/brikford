@@ -15,4 +15,8 @@
 .icon-slide-prev{ background-position: 0 -275px; width: 15px; height: 27px; }
 .icon-search{ background-position: 0 -322px; width: 40px; height: 27px; }
 .icon-btn-close{ background-position: 0 -369px; width: 14px; height: 14px; }
+.icon-custom-checkbox-unchecked{ background-position: 0 -403px; width: 24px; height: 23px; }
+.icon-custom-checkbox-checked{ background-position: 0 -446px; width: 24px; height: 23px; }
+.icon-custom-checkbox-disabled{ background-position: 0 -489px; width: 24px; height: 23px; }
+.icon-user{ background-position: 0 -532px; width: 24px; height: 24px; }
 /* icons end */
