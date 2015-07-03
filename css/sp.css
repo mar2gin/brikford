@@ -1,6 +1,9 @@
 /* icons */
 [class|="icon"],
-[class*=" icon-"]{background:url(../img/sprite-icons.png) 0 0 no-repeat;}
+[class*=" icon-"]{
+	background: url(../img/sprite-icons.png) 0 0 no-repeat;
+	position: relative;
+}
 .icon-magnifier{ background-position: 0 0; width: 24px; height: 22px; }
 .icon-bullet-menu{ background-position: 0 -42px; width: 4px; height: 7px; }
 .icon-bullet-menu-a{ background-position: 0 -69px; width: 7px; height: 4px; }
@@ -11,30 +14,5 @@
 .icon-slide-next{ background-position: 0 -228px; width: 15px; height: 27px; }
 .icon-slide-prev{ background-position: 0 -275px; width: 15px; height: 27px; }
 .icon-search{ background-position: 0 -322px; width: 40px; height: 27px; }
+.icon-btn-close{ background-position: 0 -369px; width: 14px; height: 14px; }
 /* icons end */
-
-/* social icons */
-[class|="soc-icon"],
-[class*=" soc-icon-"] {background:url(../img/sprite-social.png) 0 0 no-repeat;}
-/* social icons end */
-
-/* arrows */
-[class|="arrow"],
-[class*=" arrow-"] {background:url(../img/sprite-arrows.png) 0 0 no-repeat;}
-/* arrows end */
-
-/* form icons */
-[class|="icon-form"],
-[class*=" icon-form-"] {background:url(../img/sprite-forms.png) 0 0 no-repeat;}
-/* form icons end */
-
-/* stars */
-[class|="icon-star"],
-.icon-star,
-[class*=" icon-star-"]{background:url(../img/sprite-rating.png) 0 0 no-repeat;}
-/* stars end */
-
-/* corners */
-[class|="corner"],
-[class*=" corner-"] {background:url(../img/sprite-corners.png) 0 0 no-repeat;}
-/* corners end */

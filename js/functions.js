@@ -8,27 +8,34 @@ function showInput(){
 	var searchForm = $('.search-form');
 	if(!searchForm.length){ return; }
 	searchForm.on('click', '.btn-search', function(e){
-		if ( $(this).closest('form').find('input').val().length && $(this).parents('.search-form').find('.input-wrapper').is(':visible') ){
-			$(this).closest('form').submit();
+		var currentSearchBtn = $(this);
+		var searchWrapper = currentSearchBtn.closest('.search-form').find('.input-wrapper');
+		var serchField = searchWrapper.find('input');
+		var duration = 400;
+		if ( currentSearchBtn.closest('form').find('input').val().length && currentSearchBtn.parents('.search-form').find('.input-wrapper').is(':visible') ){
+			currentSearchBtn.closest('form').submit();
 		} else {
-			var searchWrapper = searchForm.find('.input-wrapper');
 			searchWrapper
 				.stop()
-				.show(0)
+				.addClass('search-init')
 				.animate({
-					width: 200
-				}, 200, function(){
+					width: 300
+				}, duration, function(){
+					serchField.stop().fadeIn(duration);
 					searchWrapper.find('input').val('');
 					searchWrapper.find('input').trigger('focus');
 				});
 			var yourClick = true;
 			$(document).on('click.EventSearch', function (e) {
 				if ( !yourClick && $(e.target).closest($('.input-wrapper')).length  == 0 ) {
-					searchWrapper.stop().animate({
-						width:0
-					}, 200, function(){
-						searchWrapper.hide(0);
-					});
+					searchWrapper
+						.stop()
+						.animate({
+							width:0
+						}, duration, function () {
+							searchWrapper.removeClass('search-init');
+						});
+					serchField.stop().fadeOut(duration);
 					$(document).unbind('click.EventSearch');
 				}
 				yourClick = false;
@@ -105,6 +112,7 @@ function slickInit(){
 	$('.slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		centerPadding: 0,
 		infinite: false,
 		responsive: [
 			{
@@ -134,21 +142,53 @@ function slickInit(){
 
 /*fancybox*/
 function fancyboxInit(){
+	/*gallery photos*/
 	if ($('.photo-gallery').length) {
-		$('.photo-gallery a').each(function () {
-			$(this)
-				.attr('data-fancybox-group', 'photo-gallery')
-
+		var photoGallry = $('.photo-gallery a');
+		photoGallry.each(function () {
+			$(this).attr('data-fancybox-group', 'photo-gallery')
 		});
-		$('.photo-gallery a').fancybox({
+		photoGallry.fancybox({
 			openEffect: 'none',
 			closeEffect: 'none'
 		});
-
+	}
+	/*popup*/
+	var popup = $('.popup-open');
+	if (popup.length) {
+		popup.fancybox({
+			wrapCSS: 'fancybox-popup',
+			padding: 0,
+			openEffect: 'none',
+			closeEffect: 'none'
+		});
 	}
 }
-
 /*fancybox end*/
+
+/*regions drop*/
+function regionsDrop(){
+	$('.select-regions > a').on('click', function (e) {
+		e.stopPropagation();
+		$(this).closest('.select-regions').find('.regions-drop').stop().slideToggle('fast', function () {
+			var currentDrop = $(this);
+			currentDrop.removeClass('active');
+			if(currentDrop.is(':visible')){
+				currentDrop.addClass('active');
+			}
+		});
+		e.preventDefault();
+	});
+
+	$('.regions-drop').on('click', function (e) {
+		e.stopPropagation();
+	});
+
+	$(document).on('click', function (e) {
+		$('.regions-drop').slideUp();
+	});
+}
+/*regions drop end*/
 
 /** ready/load/resize document **/
 
@@ -157,6 +197,7 @@ $(document).ready(function(){
 	showInput();
 	slickInit();
 	fancyboxInit();
+	regionsDrop();
 });
 $(window).load(function(){
 	footerBottom();

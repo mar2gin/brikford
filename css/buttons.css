@@ -85,6 +85,9 @@
 	padding: 17px 20px 14px;
 	position: relative;
 }
+[class*="btn-default"]:hover{
+	opacity: 0.85;
+}
 /*btn-default end*/
 /*btn-call*/
 .btn-default-call{
