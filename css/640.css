@@ -99,9 +99,9 @@ h1{font-size: 32px;line-height: 38px;padding: 0 0 23px;}
 .categories-list li:nth-child(5n+3){ width: auto; }
 .categories-list li:nth-child(5n+4){ width: auto; }
 .categories-list li:nth-child(5n+5){ width: auto; }
-.categories-list li:nth-child(3n+1){ width: 33.333%; }
-.categories-list li:nth-child(3n+2){ width: 33.333%; }
-.categories-list li:nth-child(3n+3){ width: 33.333%; }
+.categories-list li:nth-child(3n+1){ width: 39.3%; }
+.categories-list li:nth-child(3n+2){ width: 28.3%; }
+.categories-list li:nth-child(3n+3){ width: 32.2%; }
 .footer-bottom {padding: 20px 0 29px;}
 .addresses-list{text-align: left;padding: 0 0 12px;}
 .addresses-list li {width: 33.333%;padding: 0 0 23px;}

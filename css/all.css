@@ -354,7 +354,7 @@ a:hover .product-title > strong{text-decoration: none;}
 .footer-top{background: #f3f3f3;font-size: 14px;line-height: 18px;color: #656565;padding: 35px 0 25px;}
 .footer-top a{ color: #656565; }
 .categories-list{font-size: 0;letter-spacing: -4px;}
-.categories-list li{display: inline-block;vertical-align: top;width: 20%;font-size: 14px;letter-spacing: normal;padding: 0 2% 12px 0;text-align: left;}
+.categories-list li{display: inline-block;vertical-align: top;width: 20%;font-size: 14px;letter-spacing: normal;padding: 0 1.5% 12px 0;text-align: left;}
 .categories-list li:nth-child(5n+1){ width: 21.8%; }
 .categories-list li:nth-child(5n+2){ width: 18%; }
 .categories-list li:nth-child(5n+3){ width: 15.0%; }
