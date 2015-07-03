@@ -94,6 +94,15 @@ h1{
 	margin: 0 -16px;
 	padding: 15px;
 }
+/*breadcrumbs*/
+.breadcrumbs-list{
+	font-size: 20px;
+	padding: 3px 0 0;
+}
+.breadcrumbs-list li{
+	padding: 0 20px 9px 0;
+}
+/*breadcrumbs end*/
 /*groups*/
 .groups{
 	font-size: 16px;
@@ -172,6 +181,35 @@ h1{
 	display: none;
 }
 /*paging end*/
+/*news*/
+.news {
+	padding-bottom: 4px;
+}
+.news-list{
+	margin: 0;
+}
+.news-list li{
+	font-size: 16px;
+	line-height: 20px;
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 0 0 33px;
+}
+.news-list h3 {
+	font-size: 20px;
+	line-height: 24px;
+	padding: 0 0 5px;
+}
+.news-list .news-description {
+	max-height: none;
+	margin: 0 0 10px;
+}
+.news-list time{
+	font-size: 13px;
+	line-height: 1.2;
+}
+/*news end*/
 
 /*clients*/
 .clients-list{
