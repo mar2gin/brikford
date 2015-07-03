@@ -768,15 +768,16 @@ a:hover .product-title > strong{
 .products-item .product-brands-list{
 	font-size: 0;
 	letter-spacing: -4px;
-	margin: 19px -13px 0;
+	margin: 19px 0 0;
 	text-align: center;
 }
 .product-brands-list > li{
+	width: 50.0%;
 	letter-spacing: normal;
 	font-size: 13px;
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0 8px 5px;
+	padding: 0 0 5px;
 }
 /*products list end*/
 

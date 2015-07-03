@@ -95,16 +95,10 @@ function equalHeightInit() {
 /* footer at bottom */
 function footerBottom(){
 	var footer = $('.footer');
-	var footerOuterHeight = footer.outerHeight();
-	var footerHeight = footer.height();
-	footer.css({
-		'margin-top': -footerOuterHeight,
-		'height': footerHeight,
-		'min-height': footerHeight
-	});
-	$('.spacer').css({
-		'height': footerOuterHeight
-	});
+	var footerContHeight = footer.find('.footer-content').outerHeight();
+	footer.height(footerContHeight);
+	footer.css('margin-top', -footerContHeight);
+	$('.spacer').css('height', footerContHeight);
 }
 /* footer at bottom end */
 
@@ -227,8 +221,8 @@ $(document).ready(function(){
 $(window).load(function(){
 	footerBottom();
 	equalHeightInit();
-})
-;$(window).resize(function(){
+});
+$(window).resize(function(){
 	footerBottom();
 	equalHeightInit();
 });
