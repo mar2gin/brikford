@@ -75,6 +75,16 @@ h1{
 	height: 24px;
 	width: 24px;
 }
+.select-regions .regions-drop {
+	padding: 10px 15px;
+	font-size: 18px;
+	line-height: 22px;
+	left: -20%;
+	width: 140%;
+}
+.select-regions .regions-drop p{
+	padding: 10px 0;
+}
 /*header end*/
 .container{
 	padding-bottom: 30px;

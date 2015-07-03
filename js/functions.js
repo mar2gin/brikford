@@ -22,10 +22,10 @@ function showInput(){
 				.animate({
 					width: 300
 				}, duration, function(){
-					serchField.stop().fadeIn(duration);
 					searchWrapper.find('input').val('');
 					searchWrapper.find('input').trigger('focus');
 				});
+				serchField.stop().fadeIn(duration);
 			var yourClick = true;
 			$(document).on('click.EventSearch', function (e) {
 				if ( !yourClick && $(e.target).closest($('.input-wrapper')).length  == 0 ) {
