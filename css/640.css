@@ -17,7 +17,7 @@ h1{font-size: 32px;line-height: 38px;padding: 0 0 23px;}
 /*header*/
 .logo {margin: 12px 3.9% 12px 0;}
 .sub-logo {margin-right: 1.9%;}
-.contact-us {margin-right: 0.8%;}
+.contact-us {margin: 0 0 0 -10%;}
 .user-log{float: right;height: 100%;padding: 0;}
 .user-log .text-pre{display: none;}
 .user-log a{display: block;position: relative;height: 100%;width: 52px;text-indent: -9999px;overflow: hidden;border: none;}
