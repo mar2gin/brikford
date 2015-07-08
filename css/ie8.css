@@ -1,5 +1,5 @@
 ﻿body{
-	min-width: 980px;
+	min-width: 990px;
 }
 [class*="btn-default"]{
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfc', endColorstr='#d0d2d7', GradientType=0);
