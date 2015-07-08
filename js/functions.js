@@ -225,15 +225,9 @@ function dropMenu(){
 			.find('.menu').toggleClass('active');
 		var changeText = current.find('.text-inner');
 		if(current.closest('.nav-catalog').hasClass('active')){
-			changeText.fadeOut(60, function () {
-				changeText.text('Закрыть');
-				changeText.fadeIn(60);
-			});
+			changeText.text('Закрыть');
 		} else {
-			changeText.fadeOut(60, function () {
-				changeText.text('Каталог');
-				changeText.fadeIn(60);
-			});
+			changeText.text('Каталог');
 		}
 		var regionDrop = $('.regions-drop');
 		if(regionDrop.is(':visible')){
