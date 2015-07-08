@@ -119,14 +119,6 @@ function slickInit(){
 					slidesToScroll: 1,
 					infinite: false
 				}
-			},
-			{
-				breakpoint: 639,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					infinite: false
-				}
 			}
 			// You can unslick at a given breakpoint now by adding:
 			// settings: "unslick"
@@ -300,7 +292,6 @@ $(document).ready(function(){
 	checkbox();
 	formFocus();
 	dropMenu();
-	//dropMenuShow();
 });
 $(window).load(function(){
 	footerBottom();
