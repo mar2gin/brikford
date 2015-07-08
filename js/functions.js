@@ -209,6 +209,8 @@ function formFocus(){
 
 /*open/close drop menu*/
 function dropMenu(){
+	var menuCategory = $('.menu');
+	if(!menuCategory.length){return;}
 	var dur = 300;
 	$('.nav-catalog > a').on('click', function (e) {
 		e.stopPropagation();
@@ -223,14 +225,14 @@ function dropMenu(){
 			.find('.menu').toggleClass('active');
 		var changeText = current.find('.text-inner');
 		if(current.closest('.nav-catalog').hasClass('active')){
-			changeText.fadeOut(dur, function () {
+			changeText.fadeOut(60, function () {
 				changeText.text('Закрыть');
-				changeText.fadeIn(dur);
+				changeText.fadeIn(60);
 			});
 		} else {
-			changeText.fadeOut(dur, function () {
+			changeText.fadeOut(60, function () {
 				changeText.text('Каталог');
-				changeText.fadeIn(dur);
+				changeText.fadeIn(60);
 			});
 		}
 		var regionDrop = $('.regions-drop');
@@ -239,7 +241,7 @@ function dropMenu(){
 		}
 		e.preventDefault();
 	});
-	$('.menu').on('click', function (e) {
+	menuCategory.on('click', function (e) {
 		e.stopPropagation();
 	});
 

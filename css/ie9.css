@@ -2,9 +2,11 @@
 .btn-default-call,
 [class*="btn-default"]:before,
 .btn-default-call:before{
-	position:relative;
+	position: relative;
 	filter: none !important;
 	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false) !important;
 }
 [class*="btn-default"]:before,
-.btn-default-call:before{ position: absolute; }
+.btn-default-call:before{
+	position: absolute;
+}

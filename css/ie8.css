@@ -1,6 +1,18 @@
-﻿body{ min-width: 980px; }
-[class*="btn-default"]{ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfc', endColorstr='#d0d2d7',GradientType=0 ); }
-.btn-default-call{ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80de11', endColorstr='#3bac0d',GradientType=0 ); }
-[class*="btn-default"]:before, .btn-default-call:before{ background: none; }
-[class*="btn-default"]:hover{ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e9e9', endColorstr='#bdbfc4',GradientType=0 ); }
-.btn-default-call:hover{ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80de11', endColorstr='#3bac0d',GradientType=0 ); }
+﻿body{
+	min-width: 980px;
+}
+[class*="btn-default"]{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfc', endColorstr='#d0d2d7', GradientType=0);
+}
+.btn-default-call{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80de11', endColorstr='#3bac0d', GradientType=0);
+}
+[class*="btn-default"]:before, .btn-default-call:before{
+	background: none;
+}
+[class*="btn-default"]:hover{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#bdbfc4', GradientType=0);
+}
+.btn-default-call:hover{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80de11', endColorstr='#3bac0d', GradientType=0);
+}
