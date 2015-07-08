@@ -7,7 +7,6 @@ h1{font-size: 32px;line-height: 38px;padding: 0 0 23px;}
 /*btn end*/
 /*main blocks*/
 .main {padding: 15px 0 0;}
-.sidebar{display: none;}
 .content-wrap .content{margin: 0;}
 .max-wrap{padding: 0 16px;}
 .header .max-wrap{padding-left: 13px;padding-right: 13px;}
@@ -69,7 +68,7 @@ h1{font-size: 32px;line-height: 38px;padding: 0 0 23px;}
 /*product end*/
 /*products list end*/
 /*slider*/
-.slider {max-width: 420px;}
+.slider{ max-width: 420px; }
 /*slider end*/
 /*paging*/
 .paging{padding: 10px 0 60px;}
@@ -92,6 +91,109 @@ h1{font-size: 32px;line-height: 38px;padding: 0 0 23px;}
 .back-link{padding: 0 0 64px;}
 .back-link a {font-size: 20px;border-bottom: 1px solid #abc7df;}
 /*back link end*/
+/*sidebar*/
+.sidebar{
+	display: block;
+	padding: 0;
+	height: 0;
+}
+.sidebar > *{display: none;}
+.sidebar .menu{
+	display: block;
+	top: -99999px;
+	position: absolute;
+	left: 0;
+	background: #00549f;
+	width: 100%;
+	border-top: 1px solid #fff;
+	z-index: 10;
+	padding: 0;
+}
+.sidebar .menu.active{
+	top: 0;
+}
+.menu-list{
+	width: 33.333%;
+	padding: 15px 0 30px;
+}
+.menu-list li{
+	float: none;
+	width: auto;
+	padding: 0 0 0 33px;
+}
+.menu-list > li{
+	overflow: visible;
+}
+.menu-list > li > ul{
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 100%;
+	border-left: 1px solid #fff;
+	padding: 15px 0 30px;
+}
+.menu-list > li > ul > li > ul{
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 100%;
+	border-left: 1px solid #fff;
+	padding: 15px 0 30px;
+}
+.sidebar .menu a,
+.menu-list > li > ul > li.active > a{
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #548cbf;
+}
+.menu-list > li > ul > li.active:before{
+	content: '';
+	position: absolute;
+	background: url(../img/sprite-icons.png) no-repeat 0 -576px;
+	top: 5px;
+	left: 15px;
+	height: 7px;
+	width: 4px;
+}
+.sidebar .menu a:hover,
+.menu-list > li > ul > li.active > a:hover{
+	border-bottom-color: transparent;
+	text-decoration: none;
+}
+.menu-list > li:before{
+	background-position: -9999px 0;
+}
+.menu-list li.active:after{
+	content: '';
+	position: absolute;
+	background: url(../img/sprite-icons.png) no-repeat 0 -627px;
+	height: 10px;
+	width: 5px;
+	top: 5px;
+	right: 0;
+}
+.menu-list > li.active{
+	border: none;
+}
+.menu-list > li.active:before {
+	top: 5px;
+	left: 0;
+	background-position: 0 -576px;
+	height: 7px;
+	width: 4px;
+}
+.menu-list > li.active > a:after{
+	display: none;
+	content: none;
+}
+.menu-list > li > ul > li > ul > li{
+	padding-left: 0;
+}
+.menu-list > li > ul > li > ul > li:before{
+	content: none;
+	display: none;
+}
+/*sidebar end*/
 /*footer*/
 .footer-top {padding: 27px 0 16px;}
 .categories-list li:nth-child(5n+1){ width: auto; }
