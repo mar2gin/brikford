@@ -172,7 +172,7 @@ function regionsDrop(){
 		e.stopPropagation();
 	});
 	$(document).on('click', function (e) {
-		$('.regions-drop').slideUp('fast');
+		$('.regions-drop').slideUp('fast').removeClass('active');
 	});
 }
 /*regions drop end*/
@@ -223,7 +223,7 @@ function dropMenu(){
 		}
 		var regionDrop = $('.regions-drop');
 		if(regionDrop.is(':visible')){
-			regionDrop.slideUp(dur);
+			regionDrop.slideUp(dur).removeClass('active');
 		}
 		e.preventDefault();
 	});
