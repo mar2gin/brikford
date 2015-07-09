@@ -16,14 +16,14 @@
 				}
 
 				var deviceWidth = getDeviceWidth();
-				var maxWidth = 900;
+				var minWidth = 639;
 
-				if (deviceWidth < maxWidth) {
+				if (deviceWidth > minWidth) {
 					if (window.orientation == 0 || window.orientation == 180)
 						document.write('<meta name="viewport" content="width=device-width">'); else
 						document.write('<meta name="viewport" content="width=device-height">');
 				} else
-					document.write('<meta name="viewport" content="width=' + maxWidth + '">');
+					document.write('<meta name="viewport" content="width=' + minWidth + '">');
 			}
 		})();
 	</script>
