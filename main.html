@@ -4,28 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Brikford - Main</title>
 	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script type="text/javascript">
-		(function () {
-			if (typeof(window.orientation) !== 'undefined') {
-				function getDeviceWidth() {
-					var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
-					if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
-						deviceWidth = deviceWidth / window.devicePixelRatio;
-
-					return deviceWidth;
-				}
-
-				var deviceWidth = getDeviceWidth();
-				var minWidth = 639;
-
-				if (deviceWidth > minWidth) {
-					if (window.orientation == 0 || window.orientation == 180)
-						document.write('<meta name="viewport" content="width=device-width">'); else
-						document.write('<meta name="viewport" content="width=device-height">');
-				} else
-					document.write('<meta name="viewport" content="width=' + minWidth + '">');
-			}
-		})();
+	<script>
+		if (window.devicePixelRatio !== 1) {
+			var dpt = window.devicePixelRatio;
+			var widthM = window.screen.width * dpt;
+			var widthH = window.screen.height * dpt;
+			document.write('<meta name="viewport" content="width=' + widthM+ ', height=' + widthH + '">');
+		}
 	</script>
 	<!--Mobile optimized-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
