@@ -131,6 +131,19 @@ function slickInit(){
 
 /*fancybox*/
 function fancyboxInit(){
+	/*popup*/
+	var popup = $('.popup-open');
+	if (popup.length) {
+		popup.fancybox({
+			wrapCSS: 'fancybox-popup',
+			padding: 0,
+			openEffect: 'none',
+			closeEffect: 'none'
+		});
+	}
+}
+function fancyboxInit2(){
+	if($(window).width() < 700){return;}
 	/*gallery photos*/
 	if ($('.photo-gallery').length) {
 		var photoGallry = $('.photo-gallery a');
@@ -138,16 +151,6 @@ function fancyboxInit(){
 			$(this).attr('data-fancybox-group', 'photo-gallery')
 		});
 		photoGallry.fancybox({
-			openEffect: 'none',
-			closeEffect: 'none'
-		});
-	}
-	/*popup*/
-	var popup = $('.popup-open');
-	if (popup.length) {
-		popup.fancybox({
-			wrapCSS: 'fancybox-popup',
-			padding: 0,
 			openEffect: 'none',
 			closeEffect: 'none'
 		});
@@ -288,6 +291,7 @@ $(document).ready(function(){
 	showInput();
 	slickInit();
 	fancyboxInit();
+	fancyboxInit2();
 	regionsDrop();
 	checkbox();
 	formFocus();
